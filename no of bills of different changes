@@ -1,0 +1,37 @@
+#include<iostream>		
+#include<vector>				
+using namespace std;
+int main()
+{
+int a{0},doll,c25,c10,c5,c1,remain;
+cout<<"enter value in cents"<<endl;
+cin>>a;
+
+doll=a/100;
+
+remain=a%100;
+
+c25=remain/25;
+
+remain%=25;
+
+c10=remain/10;
+
+remain%=10;
+
+c5=remain/5;
+
+remain%=5;
+
+c1=remain;
+
+cout<<"no of dollars is:"<<doll<<endl;
+cout<<"no of 25 cents is:"<<c25<<endl;
+cout<<"no of 10 cents is:"<<c10<<endl;
+cout<<"no of 5 cents is:"<<c5<<endl;
+cout<<"no of 1 cents is:"<<c1<<endl;
+
+return 0;
+}
+
+
