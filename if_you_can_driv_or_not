@@ -1,0 +1,21 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+int age,years_left;
+bool has_car;
+cout<<"enter your age"<<endl;
+cin>>age;
+years_left=16-age;
+cout<<"do you own a car?(press 1 for 'yes' and 0 for 'no')"<<endl;
+cin>>has_car;
+if(age>=16)
+	if(has_car==1)
+		cout<<"yes, you can drive"<<endl;
+	else
+		cout<<"you need to buy a car to drive"<<endl;
+else
+		cout<<"you need to wait for "<<years_left<<" years"<<endl;
+return 0;
+}
