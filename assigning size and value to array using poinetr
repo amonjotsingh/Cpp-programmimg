@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int *doub(size_t size ,int value)
+{
+int array[size];
+int *ptr{nullptr};
+ptr = &array[size];
+int i;
+for(size_t i{0};i<size;i++)
+	*(ptr+i)=value;
+return ptr;
+}
+void dis(int *myarr,size_t size)
+{
+	int i;
+	for(size_t i{0};i<size;i++)
+		cout<<myarr[i]<<endl;
+}
+int main()
+{
+cout<<"enter the value and size"<<endl;
+int val;
+size_t siz;
+cin>>val>>siz;
+int *ar{nullptr};
+ar=doub(val,siz);
+dis(ar,siz);
+return 0;
+}
