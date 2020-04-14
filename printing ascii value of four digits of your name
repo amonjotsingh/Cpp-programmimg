@@ -1,0 +1,16 @@
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	char a,b,c,d;
+	cout<<"please enter four alphabet of your name"<<endl;
+	cin>>a;
+	cin>>b;
+	cin>>c;
+	cin>>d;
+	cout<<"ASCII value of your name "<<a<<b<<c<<d<<" is "<<int(a)<<"  "<<int(b)<<"  "<<int(c)<<"  "<<int(d)<<endl;;
+
+		return 0;
+}
