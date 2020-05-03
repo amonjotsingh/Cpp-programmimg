@@ -1,0 +1,47 @@
+
+
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+class account{
+	//attributeS
+	string name{"account"};
+	double balan{0};
+	void setbalance(double bal){balan=bal;cout<<"balance is set to "<<balan<<endl;}
+public:
+	double getbalance(){return balan;}
+	void talk(string what){cout<<name<<" says my balance is"<<what<<endl;}
+	//method
+	void setname(string namee){
+		name=namee;
+	}
+	account()
+		:account{"none",0}{
+	}
+	account(string namee)
+	:account{"namee",0}{
+	}
+	account(string namee, double balance)
+	:name{"namee"},balan{balance}{
+	}
+~account(){
+		cout<<"destructor called for "<<name<<endl;
+	}
+};
+int main()
+{
+	{
+	account no1;
+	no1.setname("amonjot");
+	}
+	{
+	account no2("manu",3000);
+	}
+
+	account *jaskiran= new account{"jaskiran"};
+	delete jaskiran;
+	return 0;
+}
+
