@@ -1,0 +1,52 @@
+
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+class groceries{
+public:
+
+int mb{0};
+
+string name{"none"};
+
+groceries(){
+	cout<<"zero arg cont is called "<<endl;
+}
+groceries(int mb){
+	cout<<"one arg const is called"<<endl;
+}
+groceries(int mb, string name){
+	cout<<"two arg const is called"<<endl;
+
+}
+
+void setbudget(string name){
+	cout<<"enter to set "<<name<<"'s monthly budget "<<endl;
+	int mon;
+	cin>>mon;
+	mb=mon;
+	cout<<"budget is set to "<<mb<<endl;
+}
+void spent_money(int money,string name){mb=mb-money;
+cout<<"monthly budget left for "<<name<<" is "<<mb<<endl;
+}
+
+};
+
+
+int main()
+{
+	{
+		groceries no1;
+	}
+	{
+		groceries no2( 200);
+	}
+	{
+		groceries no3(200,"manu");
+	}
+
+	return 0;
+}
+
