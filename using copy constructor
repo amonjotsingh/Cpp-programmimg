@@ -1,0 +1,50 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+class groceries{
+public:
+
+int mb{0};
+
+string name{"none"};
+
+int getmb(){return mb;}
+string getname(){return name;}
+groceries()
+:mb{0},name{"none"}{
+}
+groceries(int mb)
+:mb{mb},name{"none"}{
+}
+groceries(int mb, string name)
+:mb{mb},name{name}{
+}
+//copy constructor
+groceries(const groceries &source);
+//destructor
+~groceries(){
+cout<<"destructor is called for "<<name<<endl;
+}
+};
+
+groceries::groceries(const groceries &source)
+:mb(source.mb),name(source.name){
+cout<<"made a copy of "<<source.name<<endl;
+}
+void display_groceries(groceries p){
+	cout<<"money is "<<p.getmb()<<endl;
+	cout<<"name is "<<p.getname()<<endl;
+}
+
+int main()
+{
+	groceries akash(50,"akash");
+	display_groceries(akash);
+		groceries no1;
+		groceries no2( 200);
+		groceries no3(200,"manu");
+	return 0;
+}
+
+
