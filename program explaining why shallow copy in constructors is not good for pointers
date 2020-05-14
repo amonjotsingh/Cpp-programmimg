@@ -1,0 +1,40 @@
+
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+class account{
+	//attributeS
+public:
+int *poi;
+void setdata(int d){*poi=d;}
+int display_data(){return *poi;}
+	account(const account &source);
+	account(int d);
+	~account();
+};
+	account::account(int d){
+		poi= new int;
+		*poi=d;
+	}
+	account::~account(){
+		delete poi;
+		cout<<"destructor is called"<<endl;
+	}
+	account::account(const account &source)
+	:poi(source.poi){
+	cout<<"made a copy of pointer"<<endl;
+	}
+	void display_data(account p){
+		cout<<"value expected is "<<p.display_data()<<endl;
+	}
+
+int main()
+{
+	account no1{100};
+	display_data(no1);
+	account no2{no1};
+	no2.setdata(1000);
+	return 0;
+}
