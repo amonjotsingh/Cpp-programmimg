@@ -1,0 +1,41 @@
+
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+class deep_copy{
+public:
+	int *data;
+	void store(int d){
+		*data=d;
+	}
+	int getdata(){return *data;}
+	deep_copy(const deep_copy &source);
+	~deep_copy();
+	deep_copy(int d);
+};
+void display(deep_copy p){
+	cout<<"data is "<<p.getdata()<<endl;
+}
+deep_copy::deep_copy(const deep_copy &source)
+{data=new int;
+*data=*source.data;
+	cout<<"made a deep_copy of "<<*data<<endl;
+}
+deep_copy::~deep_copy()
+{
+	delete data;
+	cout<<"destructor is called"<<endl;
+}
+deep_copy::deep_copy(int d){
+	data=new int;
+	*data=d;
+}
+int main()
+{
+	deep_copy no1{100};
+	display(no1);
+
+	return 0;
+}
