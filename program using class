@@ -1,0 +1,41 @@
+
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+class movie{
+public:
+string name;
+string rating;
+int watched;
+
+movie(string name,string rating,int watched);
+void setname(string namee){name=namee;}
+string getname()const{return name;}
+void setrating(string ratingg){rating=ratingg;}
+string getrating(){return rating;}
+void setwatched(int watch){watched=watch;}
+int getwatched(){return watched;}
+void increment(){watched++;}
+movie(const movie &source)
+:name(source.name),rating(source.rating),watched(source.watched){
+}
+};
+void display_movie(movie p){
+	cout<<"name is "<<p.getname()<<endl;
+	cout<<"rating is "<<p.getrating()<<endl;
+	cout<<"movie is watched "<<p.getwatched()<<" times"<<endl;
+}
+movie::movie(string namee,string ratingg,int watched)
+:name{namee},rating{ratingg},watched{watched}{
+
+}
+int main()
+{
+	movie no1("kick","PG",2);
+	display_movie(no1);
+	no1.increment();
+	display_movie(no1);
+	return 0;
+}
