@@ -1,0 +1,110 @@
+//OUTPUT
+//sorry no movie to display
+//no of movies in your collection is 3
+//Name of movie is Hero
+//Rating of the movie is PG
+//Movie is watched 2 no of times
+//=============
+//Name of movie is Gravity
+//Rating of the movie is PG
+//Movie is watched 3 no of times
+//=============
+//Name of movie is Wanted
+//Rating of the movie is PG13
+//Movie is watched 4 no of times
+//=============
+
+
+
+
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+class Movie{
+
+string name;
+string rating;
+int watched;
+public:
+Movie(string name,string rating,int watched);
+void setname(string namee){name=namee;}
+string getname(){return name;}
+void setrating(string ratingg){rating=ratingg;}
+string getrating(){return rating;}
+void setwatched(int watch){watched=watch;}
+int getwatched(){return watched;}
+void increment(){watched++;}
+Movie(const Movie &source)
+:name(source.name),rating(source.rating),watched(source.watched){
+}
+};
+class Movies{
+public:
+	vector<Movie> Movies;
+	bool add_Movie(string name,string rating,int watched);
+	bool increment_m(string name);
+	void display_m();
+	void noofmembers();
+};
+bool Movies::add_Movie(string namee,string rating,int watched){
+for(auto Movie:Movies){
+if(Movie.getname()==namee)
+	return false;}
+
+Movie neww {namee,rating,watched};
+Movies.push_back(neww);
+return true;
+}
+bool Movies::increment_m(string name){
+	for(auto Movie:Movies)
+	{
+		if(Movie.getname()==name);
+		Movie.increment();
+		return true;
+	}
+	return false;
+}
+void Movies::display_m(){
+	if (Movies.size() ==0)
+		cout<<"sorry no movie to display"<<endl;
+
+else
+{
+	for(auto Movie:Movies){
+		cout<<"Name of movie is "<<Movie.getname()<<endl;
+		cout<<"Rating of the movie is "<<Movie.getrating()<<endl;
+		cout<<"Movie is watched "<<Movie.getwatched()<<" no of times"<<endl;
+		cout<<"============="<<endl;
+	}
+}
+}
+void Movies::noofmembers(){
+	int a=0;
+	for(auto Movie:Movies)
+		a++;
+	cout<<"no of movies in your collection is "<<a<<endl;
+}
+void display_Movie(Movie p){
+	cout<<"name is "<<p.getname()<<endl;
+	cout<<"rating is "<<p.getrating()<<endl;
+	cout<<"Movie is watched "<<p.getwatched()<<" times"<<endl;
+
+}
+
+Movie::Movie(string namee,string ratingg,int watched)
+:name{namee},rating{ratingg},watched{watched}{
+
+}
+int main()
+{
+	Movies my;
+	my.display_m();
+	my.add_Movie("Hero","PG",2);
+	my.add_Movie("Gravity","PG",3);
+	my.add_Movie("Wanted","PG13",4);
+	my.noofmembers();
+	my.display_m();
+	return 0;
+}
