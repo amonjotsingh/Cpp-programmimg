@@ -23,7 +23,7 @@ int main()
 			result+=(arr[i]+arr[j]);
 		}
 	}
-	cout<<result<<endl;
+	cout<<result<<endl;		//returning result
 return 0;
 }
 
