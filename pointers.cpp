@@ -1,4 +1,4 @@
-
+/* basic usage of pointers */
 #include<iostream>
 
 
