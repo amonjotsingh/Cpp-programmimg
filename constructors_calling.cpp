@@ -1,4 +1,4 @@
-
+//calling constructors with different arguments
 #include<iostream>
 #include<vector>
 #include<string>
@@ -9,7 +9,7 @@ class account{
 	string name{"account"};
 	double balan{0};
 	void setbalance(double bal){balan=bal;cout<<"balance is set to "<<balan<<endl;}
-public:
+	public:
 	double getbalance(){return balan;}
 	void talk(string what){cout<<name<<" says my balance is"<<what<<endl;}
 	//method
