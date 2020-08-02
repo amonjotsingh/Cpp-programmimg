@@ -1,3 +1,4 @@
+/*USING FOR LOOP CHECK IF THE NUMBERS IN VECTOR ARE DIVISBLE BY 3 OR 5*/
 #include <iostream>
 #include <vector>
 using namespace std;
