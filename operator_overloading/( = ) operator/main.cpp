@@ -1,3 +1,4 @@
+//in this we are overloading (=) operator
 #include<iostream>
 #include<vector>
 #include<cstring>
@@ -6,14 +7,14 @@ using namespace std;
 class mystring{
 	char *str;
 public:
-mystring();
-mystring(const char *s);
-mystring(const mystring &source);
-~mystring();
-void display() const;
-int get_length() const;
-const char *getstr() const;
-mystring &operator=(const mystring &source);
+	mystring();
+	mystring(const char *s);
+	mystring(const mystring &source);
+	~mystring();
+	void display() const;
+	int get_length() const;
+	const char *getstr() const;
+	mystring &operator=(const mystring &source);
 };
 
 mystring &mystring::operator=(const mystring &source ){
@@ -21,7 +22,7 @@ mystring &mystring::operator=(const mystring &source ){
 	if(this==&source)
 		return *this;
 	delete[] str;
-		str= new char[strlen(source.str)+1];
+	str= new char[strlen(source.str)+1];
 	strcpy(str,source.str);
 	return *this;
 }
