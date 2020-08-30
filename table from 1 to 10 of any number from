@@ -7,7 +7,7 @@ int main()
 	cout<<"enter the number whose table you want to see"<<endl;
 			cin>>no;
 			for(i=1;i<11;i++)
-			{
+			{Hello guys how
 			int o=i*no;
 			cout<<no<<"*"<<i<<"="<<o<<endl;
 			}
