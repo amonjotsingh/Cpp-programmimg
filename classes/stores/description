@@ -1,1 +1,4 @@
-in this example we will make a class of stores where each store would have it's name, monthly rent and due balance of the store
+in this example we will make a class of stores where each store would have it's name, monthly rent and 
+due balance of the store, we can add ass many stores as we want and set the class attributes 
+and also display the attributes of class using display function. here we have used member functions to 
+access the private members of the class
