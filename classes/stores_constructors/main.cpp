@@ -21,7 +21,8 @@ public:
 	void display(){
 		cout<<"name of store is "<<name;
 		cout<< "\nmonthly rent of store is "<<rent;
-		cout<< " \ndue balance of store is \n"<<dueb;
+		cout<< " \ndue balance of store is "<<dueb;
+		cout<<"\n\n\n"<<endl;
 
 	}
 	stores(string namee){
