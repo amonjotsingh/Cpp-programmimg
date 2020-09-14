@@ -1,0 +1,2 @@
+the struct that we use in C works same as of classes in C++. there is only one difference that is 
+struct data is generally public and class data is generally private unless declared otherwisew
