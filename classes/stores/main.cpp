@@ -4,10 +4,12 @@
 using namespace std;
 
 class stores{
+	
 private:
 	string name;
 	int rent;
 	double dueb;
+	
 public:
 	void setname( string namee){
 		name=namee;
@@ -22,9 +24,9 @@ public:
 		cout<<"name of store is "<<name;
 		cout<< "\nmonthly rent of store is "<<rent;
 		cout<< " \ndue balance of store is "<<dueb;
-
-	}
+``	}
 };
+
 int main()
 {
 	stores jcy;
