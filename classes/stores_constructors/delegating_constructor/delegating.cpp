@@ -2,13 +2,13 @@
 #include<vector>
 #include<cstring>
 using namespace std;
-
-
 class stores{
+	
 private:
 	string name;
 	int rent;
 	double dueb;
+	
 public:
 	void setname( string namee){
 		name=namee;
@@ -35,6 +35,7 @@ public:
 
 	}
 };
+
 int main()
 {
 	stores jcy("jcy");
