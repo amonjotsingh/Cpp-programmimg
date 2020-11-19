@@ -44,4 +44,3 @@ void savingacc::interestamount(int months){
 	interestam= (balance*interest*months/100);
 	std::cout<<"interest amount after "<<months<<" months would be "<< interestam<<std::endl;
 }
-s
