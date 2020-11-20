@@ -1,1 +1,1 @@
-in this example we show that if we use base and derived classes 
+in this example we show that if we use base and derived classes and define constructors and desturctors for derived and base class. when we use a derived class object the constructor for base class would be called first and then conctructor for derived class would be called 
