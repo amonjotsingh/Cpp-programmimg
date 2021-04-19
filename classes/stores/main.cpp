@@ -1,8 +1,8 @@
-#include<iostream>
-#include<vector>
+#include<iostream>  //header files
+#include<vector>    
 #include<cstring>
 using namespace std;
-
+//defining class
 class stores{
 	
 private:
