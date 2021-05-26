@@ -1,5 +1,0 @@
-Copy constructor is used when we have
- class object and we need to use it's
- attribute, so we use copy constructor
- and only use the copy of the orginal 
-attribute
