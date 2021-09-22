@@ -1,2 +1,0 @@
-in this concept of copying constructor one copy constructor is defined for all the arguments to be copied 
-and then we can simply call that delegated constructor to use any number of arguments we want 
