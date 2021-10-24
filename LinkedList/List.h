@@ -1,41 +1,26 @@
-//============================================================================
-// Name        : linkedlist.cpp
-// Author      : Amonjot
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
+/*
+ * List.h
+ *
+ *  Created on: Oct. 24, 2021
+ *      Author: chhin
+ */
 
-#include <iostream>
-#include "List.h"
-using namespace std;
+#ifndef LIST_H_
+#define LIST_H_
 
-List::List(){
-	head = NULL;
-	next = NULL;
-	curr = NULL;
-}
-void List::Addnode(int data){
-	nodeptr n;
-	n->next =  NULL;
-	n->data = data;
-	if(head != NULL){
-		curr = head;
-		while(curr->next != NULL){
-			curr = curr->next;
-		}
-		curr->next = n;
-	}else{
-		head = n ;
-	}
-}
-void List::PrintList(){
-	curr = head;
-	while (curr->next != NULL){
-		cout << curr->data << endl;
-	}
-}
-int main() {
+class List{
+public:
+	struct Node{
+		int data;
+		Node* next;
+	};
+	typedef Node* nodeptr;
+	nodeptr head;
+	nodeptr next;
+	nodeptr curr;
+	List();
+	void Addnode(int data);
+	void PrintList();
+};
 
-	return 0;
-}
+#endif /* LIST_H_ */
